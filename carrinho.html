@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/Index.css">
+  <title>Carrinho - Elegance</title>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Carrinho de Compras</h1>
+      <p>Confira os produtos que você adicionou ao carrinho.</p>
+    </div>
+    <button id="logout-button" onclick="logout()">Logout</button>
+  </header>
+
+  <section id="carrinho" class="produtos">
+    <h2>Produtos no Carrinho</h2>
+    <div class="product-list" id="cart-list">
+    </div>
+    <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
+    <p>Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a></p>
+  </footer>
+
+  <script src="js/carrinho.js"></script>
+</body>
+
+</html>

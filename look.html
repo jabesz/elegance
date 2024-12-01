@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/Index.css">
+  <title>Look - Elegance</title>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Seu Look</h1>
+      <p>Confira os produtos que você selecionou para o seu look!</p>
+    </div>
+    <button id="logout-button" onclick="logout()">Logout</button>
+  </header>
+
+  <section id="look" class="produtos">
+    <h2>Looks Montados</h2>
+    <div class="product-list" id="look-list">
+    </div>
+    <button onclick="document.location='carrinho.html'">Ir para o Carrinho</button>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
+    <p>Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a></p>
+  </footer>
+
+  <script src="js/look.js"></script>
+</body>
+
+</html>
