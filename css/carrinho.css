@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -14,14 +13,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* Garante que o conteúdo fique alinhado no topo */
   padding: 0;
   min-height: 100vh;
   text-align: center;
-  /* Centraliza o texto na página */
 }
 
-/* Header */
 header {
   background-color: #D8D8D8;
   padding: 20px 0;
@@ -29,7 +25,6 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  /* Centraliza o conteúdo do cabeçalho */
 }
 
 .header-top {
@@ -38,7 +33,6 @@ header {
   align-items: center;
   width: 90%;
   max-width: 1200px;
-  /* Limita a largura máxima do cabeçalho */
 }
 
 .logo h1 {
@@ -47,7 +41,6 @@ header {
   margin: 0;
 }
 
-/* Hero Section */
 .hero {
   width: 100%;
   height: 60vh;
@@ -75,7 +68,6 @@ header {
 .hero-text {
   z-index: 2;
   text-align: center;
-  /* Centraliza o texto dentro da hero */
 }
 
 .hero-text h1 {
@@ -103,31 +95,25 @@ header {
   background-color: #6e4029;
 }
 
-/* Carrinho Section */
 #carrinho {
   padding: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 20px auto;
-  /* Centraliza a seção do carrinho */
   text-align: left;
-  /* Deixa o texto alinhado à esquerda */
 }
 
 #carrinho h2 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
-  /* Espaço entre o título e o conteúdo */
 }
 
 .product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* Centraliza os itens do carrinho */
   gap: 20px;
-  /* Espaço entre os itens do carrinho */
   margin-top: 20px;
 }
 
@@ -138,7 +124,6 @@ header {
   width: 30%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  /* Centraliza o conteúdo dentro do item do produto */
 }
 
 .product-item img {
@@ -167,10 +152,8 @@ button#finalizar-compra {
   margin-top: 20px;
   transition: all 0.3s ease;
   display: block;
-  /* Faz o botão ocupar 100% da largura disponível */
   margin-left: auto;
   margin-right: auto;
-  /* Centraliza o botão */
 }
 
 button#finalizar-compra:hover {
@@ -179,7 +162,6 @@ button#finalizar-compra:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
 .footer {
   background-color: #333;
   width: 100%;
@@ -236,7 +218,6 @@ button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero-text h1 {
     font-size: 2.5rem;

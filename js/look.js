@@ -1,8 +1,7 @@
-// Função para renderizar os looks
 function renderLook() {
   const lookItems = JSON.parse(localStorage.getItem('lookItems')) || [];
   const lookList = document.getElementById('look-list');
-  lookList.innerHTML = ''; // Limpa a lista antes de renderizar
+  lookList.innerHTML = '';
 
   lookItems.forEach((item, index) => {
     const productItem = document.createElement('div');
@@ -19,38 +18,34 @@ function renderLook() {
   });
 }
 
-// Função para adicionar ao carrinho
 function adicionarAoCarrinho(index) {
   const lookItems = JSON.parse(localStorage.getItem('lookItems')) || [];
   const produtoSelecionado = lookItems[index];
 
-  // Adicionando dados fictícios, como preço e disponibilidade
-  produtoSelecionado.price = (Math.random() * 100).toFixed(2); // Preço aleatório
-  produtoSelecionado.availability = 'Em estoque'; // Disponibilidade fictícia
-  produtoSelecionado.rating = '★★★★★'; // Avaliação fictícia
+  produtoSelecionado.price = (Math.random() * 100).toFixed(2);
+  produtoSelecionado.availability = 'Em estoque';
+  produtoSelecionado.rating = '★★★★★';
 
   let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
   cartItems.push(produtoSelecionado);
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-  lookItems.splice(index, 1);  // Remove o item do look
+  lookItems.splice(index, 1);
   localStorage.setItem('lookItems', JSON.stringify(lookItems));
 
   alert(`${produtoSelecionado.name} foi adicionado ao carrinho!`);
 
-  renderLook();  // Re-renderiza os looks
-  renderCart();  // Re-renderiza o carrinho
+  renderLook();
+  renderCart();
 }
 
-// Função para excluir do look
 function excluirDoLook(index) {
   let lookItems = JSON.parse(localStorage.getItem('lookItems')) || [];
-  lookItems.splice(index, 1);  // Remove o item do look
+  lookItems.splice(index, 1);
   localStorage.setItem('lookItems', JSON.stringify(lookItems));
-  renderLook();  // Re-renderiza os looks
+  renderLook();
 }
 
-// Função que será usada quando o botão "Ver Detalhes" for clicado
 function verDetalhes(index) {
   const lookItems = JSON.parse(localStorage.getItem('lookItems')) || [];
   const produto = lookItems[index];
@@ -64,7 +59,6 @@ function verDetalhes(index) {
   `);
 }
 
-// Renderizando os looks e carrinho ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
   renderLook();
   renderCart();

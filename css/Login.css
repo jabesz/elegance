@@ -7,9 +7,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
-  /* Nova cor de fundo */
   color: #333;
-  /* Cor do texto */
   line-height: 1.6;
   display: flex;
   justify-content: center;
@@ -35,7 +33,6 @@ body {
 
 h1 {
   color: #e74c3c;
-  /* Cor para o título */
   font-size: 28px;
   margin-bottom: 20px;
 }
@@ -53,7 +50,6 @@ input {
 
 input:focus {
   border-color: #e74c3c;
-  /* Nova cor para foco */
   outline: none;
 }
 
@@ -61,7 +57,6 @@ button {
   width: 100%;
   padding: 15px;
   background-color: #e74c3c;
-  /* Cor do botão */
   color: white;
   border: none;
   border-radius: 5px;
@@ -72,7 +67,6 @@ button {
 
 button:hover {
   background-color: #d35c3f;
-  /* Cor do botão ao passar o mouse */
 }
 
 p {
@@ -82,7 +76,6 @@ p {
 
 a {
   color: #e74c3c;
-  /* Cor do link */
   text-decoration: none;
   font-weight: bold;
 }
