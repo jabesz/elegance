@@ -1,0 +1,280 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #d8d8d8;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Garante que o conteúdo fique alinhado no topo */
+  padding: 0;
+  min-height: 100vh;
+  text-align: center;
+  /* Centraliza o texto na página */
+}
+
+/* Header */
+header {
+  background-color: #D8D8D8;
+  padding: 20px 0;
+  color: #e74c3c;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Centraliza o conteúdo do cabeçalho */
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  /* Limita a largura máxima do cabeçalho */
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 60vh;
+  background: url('../assets/img-header.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.hero-text {
+  z-index: 2;
+  text-align: center;
+  /* Centraliza o texto dentro da hero */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.hero button {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #6e4029;
+}
+
+/* Carrinho Section */
+#carrinho {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  /* Centraliza a seção do carrinho */
+  text-align: left;
+  /* Deixa o texto alinhado à esquerda */
+}
+
+#carrinho h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  /* Espaço entre o título e o conteúdo */
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centraliza os itens do carrinho */
+  gap: 20px;
+  /* Espaço entre os itens do carrinho */
+  margin-top: 20px;
+}
+
+.product-list .product-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* Centraliza o conteúdo dentro do item do produto */
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-item h3 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.product-item p {
+  font-size: 1.2rem;
+  color: #e74c3c;
+}
+
+button#finalizar-compra {
+  padding: 15px 30px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  display: block;
+  /* Faz o botão ocupar 100% da largura disponível */
+  margin-left: auto;
+  margin-right: auto;
+  /* Centraliza o botão */
+}
+
+button#finalizar-compra:hover {
+  background-color: #db3d28;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  width: 100%;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #e55340;
+}
+
+.footer .social-media {
+  margin-top: 20px;
+}
+
+.footer .social-media a {
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+.footer .social-media a:hover {
+  color: #e55340;
+}
+
+button {
+  padding: 12px 30px;
+  background-color: #e55340;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #db3d28;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.3rem;
+  }
+
+  .hero button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+
+  #carrinho h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-list {
+    flex-direction: column;
+  }
+
+  .product-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  button#finalizar-compra {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer .social-media a {
+    margin: 0 10px;
+    font-size: 1.1rem;
+  }
+}

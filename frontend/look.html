@@ -4,22 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Index.css">
+  <link rel="stylesheet" href="../css/look.css">
   <title>Look - Elegance</title>
 </head>
 
 <body>
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Seu Look</h1>
-      <p>Confira os produtos que você selecionou para o seu look!</p>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <h1>Elegance</h1>
+      </div>
+      <a href="./index.html"><button>Voltar</button></a>
     </div>
-    <button id="logout-button" onclick="logout()">Logout</button>
   </header>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Look Elegance</h1>
+    </div>
+  </div>
 
   <section id="look" class="produtos">
     <h2>Looks Montados</h2>
     <div class="product-list" id="look-list">
+      <!-- Os itens de produto serão renderizados aqui pelo JS -->
     </div>
     <button onclick="document.location='carrinho.html'">Ir para o Carrinho</button>
   </section>
@@ -29,7 +37,7 @@
     <p>Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a></p>
   </footer>
 
-  <script src="js/look.js"></script>
+  <script src="../js/look.js"></script>
 </body>
 
 </html>

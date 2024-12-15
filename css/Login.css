@@ -6,17 +6,15 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f1e1;
-  background-image: url('https://www.transparenttextures.com/patterns/corkboard.png');
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #f4f4f4;
+  /* Nova cor de fundo */
   color: #333;
+  /* Cor do texto */
   line-height: 1.6;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
 }
 
 .login-container {
@@ -36,7 +34,8 @@ body {
 }
 
 h1 {
-  color: #8b5e3c;
+  color: #e74c3c;
+  /* Cor para o título */
   font-size: 28px;
   margin-bottom: 20px;
 }
@@ -53,14 +52,16 @@ input {
 }
 
 input:focus {
-  border-color: #8b5e3c;
+  border-color: #e74c3c;
+  /* Nova cor para foco */
   outline: none;
 }
 
 button {
   width: 100%;
   padding: 15px;
-  background-color: #8b5e3c;
+  background-color: #e74c3c;
+  /* Cor do botão */
   color: white;
   border: none;
   border-radius: 5px;
@@ -70,7 +71,8 @@ button {
 }
 
 button:hover {
-  background-color: #6e4029;
+  background-color: #d35c3f;
+  /* Cor do botão ao passar o mouse */
 }
 
 p {
@@ -79,7 +81,8 @@ p {
 }
 
 a {
-  color: #8b5e3c;
+  color: #e74c3c;
+  /* Cor do link */
   text-decoration: none;
   font-weight: bold;
 }
