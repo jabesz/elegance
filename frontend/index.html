@@ -1,343 +1,414 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Index.css" />
+    <title>Elegance - Monte seu Look</title>
+    <link rel="icon" href="https://www.example.com/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/Index.css">
-  <title>Elegance - Monte seu Look</title>
-  <link rel="icon" href="https://www.example.com/favicon.ico">
-</head>
-
-<body>
-  <header>
-    <div class="header-top">
-      <div class="logo">
-        <h1>Elegance</h1>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <h1>Elegance</h1>
+        </div>
+        <button id="logout-button" onclick="logout()">Logout</button>
       </div>
-      <button id="logout-button" onclick="logout()">Logout</button>
-    </div>
-  </header>
-  <div class="hero">
-    <div class="hero-text">
-      <h1>Monte seu Look com Elegance</h1>
-      <p>Roupas modulares e sustentáveis para todos os estilos e ocasiões.</p>
-      <button onclick="document.location='#produtos'">Ver Looks</button>
-    </div>
-  </div>
-
-  <section id="links" class="links">
-    <h2>Explore Mais</h2>
-    <div class="link-buttons">
-      <a href="look.html">
-        <button>Ir para o Look</button>
-      </a>
-      <a href="carrinho.html">
-        <button>Ir para o Carrinho</button>
-      </a>
-      <a href="produtos.html">
-        <button>Ver Produtos</button>
-      </a>
-      <a href="ofertas.html">
-        <button>Ver Ofertas</button>
-      </a>
-    </div>
-  </section>
-
-  <section id="como-funciona" class="how-it-works">
-    <h2>Como Funciona?</h2>
-    <div class="steps">
-      <div class="step">
-        <h3>Escolha suas peças</h3>
-        <p>Explore nossa coleção de peças modulares e escolha aquelas que mais combinam com seu estilo pessoal. Cada peça
-          foi projetada para ser versátil e combinar com várias outras.</p>
-      </div>
-      <div class="step">
-        <h3>Monte seu look</h3>
-        <p>Use a funcionalidade de montagem para combinar peças de diferentes categorias e criar looks exclusivos. Quer
-          algo mais ousado ou mais casual? As possibilidades são infinitas.</p>
-      </div>
-      <div class="step">
-        <h3>Transforme seu estilo</h3>
-        <p>Com opções versáteis e sustentáveis, você pode criar novos looks constantemente sem precisar de muitas peças.
-          Sinta-se único em qualquer ocasião, sem gastar excessivamente.</p>
+    </header>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Monte seu Look com Elegance</h1>
+        <p>Roupas modulares e sustentáveis para todos os estilos e ocasiões.</p>
+        <button onclick="document.location='#produtos'">Ver Looks</button>
       </div>
     </div>
-  </section>
 
-  <section id="produtos" class="produtos">
-    <h2>Monte seu Look</h2>
-    <h3>Roupas mais vendidas</h3>
-    <div class="product-list">
-      <div class="product-item">
-        <img id="CamisetaPolo-img" src="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg"
-          alt="Camiseta Polo">
-        <h3>Camiseta Polo</h3>
-        <p>Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve. Ideal para o
-          verão e dias frescos.</p>
-        <p class="price">R$ 99,99</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★★☆</span>
-          <p>25 avaliações</p>
+    <section id="links" class="links">
+      <h2>Explore Mais</h2>
+      <div class="link-buttons">
+        <a href="look.html">
+          <button>Ir para o Look</button>
+        </a>
+        <a href="carrinho.html">
+          <button>Ir para o Carrinho</button>
+        </a>
+        <a href="produtos.html">
+          <button>Ver Produtos</button>
+        </a>
+        <a href="ofertas.html">
+          <button>Ver Ofertas</button>
+        </a>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="how-it-works">
+      <h2>Como Funciona?</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Escolha suas peças</h3>
+          <p>
+            Explore nossa coleção de peças modulares e escolha aquelas que mais
+            combinam com seu estilo pessoal. Cada peça foi projetada para ser
+            versátil e combinar com várias outras.
+          </p>
         </div>
-        <button onclick="adicionarAoLook('CamisetaPolo')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CamisetaPolo">Ver Detalhes</button>
-      </div>
-
-      <div class="product-item">
-        <img id="CalcaSocial-img" src="https://i.pinimg.com/236x/6d/eb/6a/6deb6a8284fc60d01180d8534aee4146.jpg"
-          alt="Calça Social">
-        <h3>Calça Social</h3>
-        <p>Transforma-se facilmente em shorts com um simples ajuste, perfeita para dias de calor e eventos mais casuais.
-        </p>
-        <p class="price">R$ 149,90</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★☆☆</span>
-          <p>18 avaliações</p>
+        <div class="step">
+          <h3>Monte seu look</h3>
+          <p>
+            Use a funcionalidade de montagem para combinar peças de diferentes
+            categorias e criar looks exclusivos. Quer algo mais ousado ou mais
+            casual? As possibilidades são infinitas.
+          </p>
         </div>
-        <button onclick="adicionarAoLook('CalcaSocial')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CalcaSocial">Ver Detalhes</button>
-      </div>
-
-      <div class="product-item">
-        <img id="CamisaTime-img" src="https://i.pinimg.com/236x/2c/54/1b/2c541ba696508151037e9fb7b00d1d61.jpg"
-          alt="Camisa de Time">
-        <h3>Camisa de Time</h3>
-        <p>Camisa confortável com design moderno, ideal para momentos de lazer e prática de esportes. Perfeita para fãs
-          de esportes.</p>
-        <p class="price">R$ 89,90</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★★★</span>
-          <p>50 avaliações</p>
+        <div class="step">
+          <h3>Transforme seu estilo</h3>
+          <p>
+            Com opções versáteis e sustentáveis, você pode criar novos looks
+            constantemente sem precisar de muitas peças. Sinta-se único em
+            qualquer ocasião, sem gastar excessivamente.
+          </p>
         </div>
-        <button onclick="adicionarAoLook('CamisaTime')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CamisaTime">Ver Detalhes</button>
       </div>
-      <div class="product-item">
-        <img id="CamisetaPolo-img" src="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg"
-          alt="Camiseta Polo">
-        <h3>Camiseta Polo</h3>
-        <p>Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve. Ideal para o
-          verão e dias frescos.</p>
-        <p class="price">R$ 99,99</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★★☆</span>
-          <p>25 avaliações</p>
+    </section>
+
+    <section id="produtos" class="produtos">
+      <h2>Monte seu Look</h2>
+      <h3>Roupas mais vendidas</h3>
+      <div class="product-list">
+        <div class="product-item">
+          <img
+            id="CamisetaPolo-img"
+            src="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg"
+            alt="Camiseta Polo"
+          />
+          <h3>Camiseta Polo</h3>
+          <p>
+            Peça versátil para todas as ocasiões, pode ser usada como uma blusa
+            casual ou uma jaqueta leve. Ideal para o verão e dias frescos.
+          </p>
+          <p class="price">R$ 99,99</p>
+          <p class="availability">Em estoque</p>
+          <div class="rating">
+            <span>★★★★☆</span>
+            <p>25 avaliações</p>
+          </div>
+          <button onclick="adicionarAoLook('CamisetaPolo')">
+            Adicionar ao look
+          </button>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="CamisetaPolo"
+          >
+            Ver Detalhes
+          </button>
         </div>
-        <button onclick="adicionarAoLook('CamisetaPolo')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CamisetaPolo">Ver Detalhes</button>
-      </div>
 
-      <div class="product-item">
-        <img id="CalcaSocial-img" src="https://i.pinimg.com/236x/6d/eb/6a/6deb6a8284fc60d01180d8534aee4146.jpg"
-          alt="Calça Social">
-        <h3>Calça Social</h3>
-        <p>Transforma-se facilmente em shorts com um simples ajuste, perfeita para dias de calor e eventos mais casuais.
-        </p>
-        <p class="price">R$ 149,90</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★☆☆</span>
-          <p>18 avaliações</p>
+        <div class="product-item">
+          <img
+            id="CalcaSocial-img"
+            src="https://i.pinimg.com/236x/6d/eb/6a/6deb6a8284fc60d01180d8534aee4146.jpg"
+            alt="Calça Social"
+          />
+          <h3>Calça Social</h3>
+          <p>
+            Transforma-se facilmente em shorts com um simples ajuste, perfeita
+            para dias de calor e eventos mais casuais.
+          </p>
+          <p class="price">R$ 149,90</p>
+          <p class="availability">Em estoque</p>
+          <div class="rating">
+            <span>★★★☆☆</span>
+            <p>18 avaliações</p>
+          </div>
+          <button onclick="adicionarAoLook('CalcaSocial')">
+            Adicionar ao look
+          </button>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="CalcaSocial"
+          >
+            Ver Detalhes
+          </button>
         </div>
-        <button onclick="adicionarAoLook('CalcaSocial')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CalcaSocial">Ver Detalhes</button>
-      </div>
 
-      <div class="product-item">
-        <img id="CamisaTime-img" src="https://i.pinimg.com/236x/2c/54/1b/2c541ba696508151037e9fb7b00d1d61.jpg"
-          alt="Camisa de Time">
-        <h3>Camisa de Time</h3>
-        <p>Camisa confortável com design moderno, ideal para momentos de lazer e prática de esportes. Perfeita para fãs
-          de esportes.</p>
-        <p class="price">R$ 89,90</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★★★</span>
-          <p>50 avaliações</p>
+        <div class="product-item">
+          <img
+            id="CamisaTime-img"
+            src="https://i.pinimg.com/236x/2c/54/1b/2c541ba696508151037e9fb7b00d1d61.jpg"
+            alt="Camisa de Time"
+          />
+          <h3>Camisa de Time</h3>
+          <p>
+            Camisa confortável com design moderno, ideal para momentos de lazer
+            e prática de esportes. Perfeita para fãs de esportes.
+          </p>
+          <p class="price">R$ 89,90</p>
+          <p class="availability">Em estoque</p>
+          <div class="rating">
+            <span>★★★★★</span>
+            <p>50 avaliações</p>
+          </div>
+          <button onclick="adicionarAoLook('CamisaTime')">
+            Adicionar ao look
+          </button>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="CamisaTime"
+          >
+            Ver Detalhes
+          </button>
         </div>
-        <button onclick="adicionarAoLook('CamisaTime')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CamisaTime">Ver Detalhes</button>
       </div>
-      <div class="product-item">
-        <img id="CamisetaPolo-img" src="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg"
-          alt="Camiseta Polo">
-        <h3>Camiseta Polo</h3>
-        <p>Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve. Ideal para o
-          verão e dias frescos.</p>
-        <p class="price">R$ 99,99</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★★☆</span>
-          <p>25 avaliações</p>
+    </section>
+
+    <section id="produtos-populares" class="produtos-populares">
+      <h2>Looks Populares</h2>
+      <div class="popular-product-list">
+        <div class="product-item">
+          <img
+            src="https://i.pinimg.com/236x/09/24/0f/09240ff8a6bc8e2479c5573bd23c99f0.jpg"
+            alt="Kit Look 1"
+            id="KitLook1-img"
+          />
+          <h3>Kit Look 1</h3>
+          <p>Um conjunto perfeito para o seu dia a dia.</p>
+          <p class="price">R$ 249,90</p>
+          <p class="availability">Em estoque</p>
+          <div class="rating">
+            <span>★★★★★</span>
+            <p>50 avaliações</p>
+          </div>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="Kit Look 1"
+          >
+            Ver Detalhes
+          </button>
+          <button
+            class="action-button"
+            data-action="adicionarAoCarrinhoProduto"
+            data-product="Kit Look 1"
+          >
+            Adicionar ao Carrinho
+          </button>
         </div>
-        <button onclick="adicionarAoLook('CamisetaPolo')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CamisetaPolo">Ver Detalhes</button>
-      </div>
 
-      <div class="product-item">
-        <img id="CalcaSocial-img" src="https://i.pinimg.com/236x/6d/eb/6a/6deb6a8284fc60d01180d8534aee4146.jpg"
-          alt="Calça Social">
-        <h3>Calça Social</h3>
-        <p>Transforma-se facilmente em shorts com um simples ajuste, perfeita para dias de calor e eventos mais casuais.
-        </p>
-        <p class="price">R$ 149,90</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★☆☆</span>
-          <p>18 avaliações</p>
+        <div class="product-item">
+          <img
+            src="https://i.pinimg.com/236x/01/1c/79/011c79452c5a4c6365a8996bce11f3cd.jpg"
+            alt="Kit Look 2"
+            id="KitLook2-img"
+          />
+          <h3>Kit Look 2</h3>
+          <p>Estilo confortável e versátil.</p>
+          <p class="price">R$ 279,90</p>
+          <p class="availability">Em estoque</p>
+          <div class="rating">
+            <span>★★★★☆</span>
+            <p>45 avaliações</p>
+          </div>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="Kit Look 2"
+          >
+            Ver Detalhes
+          </button>
+          <button
+            class="action-button"
+            data-action="adicionarAoCarrinhoProduto"
+            data-product="Kit Look 2"
+          >
+            Adicionar ao Carrinho
+          </button>
         </div>
-        <button onclick="adicionarAoLook('CalcaSocial')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CalcaSocial">Ver Detalhes</button>
-      </div>
 
-      <div class="product-item">
-        <img id="CamisaTime-img" src="https://i.pinimg.com/236x/2c/54/1b/2c541ba696508151037e9fb7b00d1d61.jpg"
-          alt="Camisa de Time">
-        <h3>Camisa de Time</h3>
-        <p>Camisa confortável com design moderno, ideal para momentos de lazer e prática de esportes. Perfeita para fãs
-          de esportes.</p>
-        <p class="price">R$ 89,90</p>
-        <p class="availability">Em estoque</p>
-        <div class="rating">
-          <span>★★★★★</span>
-          <p>50 avaliações</p>
+        <div class="product-item">
+          <img
+            src="https://i.pinimg.com/474x/ae/6f/c7/ae6fc71c791020dd99b46add557c92a7.jpg"
+            alt="Kit Look 3"
+            id="KitLook3-img"
+          />
+          <h3>Kit Look 3</h3>
+          <p>Estilo confortável e versátil.</p>
+          <p class="price">R$ 279,90</p>
+          <p class="availability">Em estoque</p>
+          <div class="rating">
+            <span>★★★★☆</span>
+            <p>40 avaliações</p>
+          </div>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="Kit Look 3"
+          >
+            Ver Detalhes
+          </button>
+          <button
+            class="action-button"
+            data-action="adicionarAoCarrinhoProduto"
+            data-product="Kit Look 3"
+          >
+            Adicionar ao Carrinho
+          </button>
         </div>
-        <button onclick="adicionarAoLook('CamisaTime')">Adicionar ao look</button>
-        <button class="action-button" data-action="verDetalhes" data-product="CamisaTime">Ver Detalhes</button>
       </div>
-    </div>
-  </section>
+    </section>
 
-<section id="produtos-populares" class="produtos-populares">
-  <h2>Looks Populares</h2>
-  <div class="popular-product-list">
-    <div class="product-item">
-      <img src="https://i.pinimg.com/236x/09/24/0f/09240ff8a6bc8e2479c5573bd23c99f0.jpg" alt="Kit Look 1"
-        id="KitLook1-img">
-      <h3>Kit Look 1</h3>
-      <p>Um conjunto perfeito para o seu dia a dia.</p>
-      <p class="price">R$ 249,90</p>
-      <p class="availability">Em estoque</p>
-      <div class="rating">
-        <span>★★★★★</span>
-        <p>50 avaliações</p>
-      </div>
-      <button class="action-button" data-action="verDetalhes" data-product="Kit Look 1">Ver Detalhes</button>
-      <button class="action-button" data-action="adicionarAoCarrinho" data-product="Kit Look 1">Adicionar ao
-        Carrinho</button>
-    </div>
+    <section id="produtos" class="produtos">
+      <h2>Recomendações de Looks</h2>
+      <div class="look-recommendation">
+        <div class="product-item">
+          <img
+            id="Look-Casual-img"
+            src="https://i.pinimg.com/736x/8b/3c/a6/8b3ca6336f7800fc22181d1a042771b1.jpg"
+            alt="Look Casual"
+          />
+          <h3>Look Casual</h3>
+          <p>Perfeito para o dia a dia, com peças que combinam entre si.</p>
+          <p class="price" style="color: #000000">R$ 279,90</p>
+          <p class="availability" style="color: #28a745">Em estoque</p>
+          <div class="rating" style="color: #ffd700">
+            <span>★★★★☆</span>
+            <p>40 avaliações</p>
+          </div>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="Look Casual"
+          >
+            Ver Detalhes
+          </button>
+          <button onclick="adicionarAoLook('Look-Casual')">
+            Adicionar ao look
+          </button>
+        </div>
 
-    <div class="product-item">
-      <img src="https://i.pinimg.com/236x/01/1c/79/011c79452c5a4c6365a8996bce11f3cd.jpg" alt="Kit Look 2"
-        id="KitLook2-img">
-      <h3>Kit Look 2</h3>
-      <p>Estilo confortável e versátil.</p>
-      <p class="price">R$ 279,90</p>
-      <p class="availability">Em estoque</p>
-      <div class="rating">
-        <span>★★★★☆</span>
-        <p>45 avaliações</p>
-      </div>
-      <button class="action-button" data-action="verDetalhes" data-product="Kit Look 2">Ver Detalhes</button>
-      <button class="action-button" data-action="adicionarAoCarrinho" data-product="Kit Look 2">Adicionar ao
-        Carrinho</button>
-    </div>
+        <div class="product-item">
+          <img
+            src="https://i.pinimg.com/474x/6c/3b/01/6c3b01f45cef40cc2e23f5c7ac587c1b.jpg"
+            alt="Look Elegante"
+            id="Look-Elegante-img"
+          />
+          <h3>Look Elegante</h3>
+          <p>
+            Para eventos formais ou ocasiões especiais, sempre elegante e
+            confortável.
+          </p>
+          <p class="price" style="color: #000000">R$ 279,90</p>
+          <p class="availability" style="color: #28a745">Em estoque</p>
+          <div class="rating" style="color: #ffd700">
+            <span>★★★★☆</span>
+            <p>40 avaliações</p>
+          </div>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="Look Elegante"
+          >
+            Ver Detalhes
+          </button>
+          <button onclick="adicionarAoLook('Look-Elegante')">
+            Adicionar ao look
+          </button>
+        </div>
 
-    <div class="product-item">
-      <img src="https://i.pinimg.com/236x/01/1c/79/011c79452c5a4c6365a8996bce11f3cd.jpg" alt="Kit Look 3"
-        id="KitLook3-img">
-      <h3>Kit Look 3</h3>
-      <p>Estilo confortável e versátil.</p>
-      <p class="price">R$ 279,90</p>
-      <p class="availability">Em estoque</p>
-      <div class="rating">
-        <span>★★★★☆</span>
-        <p>40 avaliações</p>
+        <div class="product-item">
+          <img
+            src="https://i.pinimg.com/474x/aa/0e/4a/aa0e4acf6980dab3b7091919e00a329e.jpg"
+            alt="Look de Natal"
+            id="Look-de-Natal-img"
+          />
+          <h3>Look de Natal</h3>
+          <p>
+            Para eventos formais ou ocasiões especiais, sempre elegante e
+            confortável.
+          </p>
+          <p class="price" style="color: #000000">R$ 279,90</p>
+          <p class="availability" style="color: #28a745">Em estoque</p>
+          <div class="rating" style="color: #ffd700">
+            <span>★★★★☆</span>
+            <p>40 avaliações</p>
+          </div>
+          <button
+            class="action-button"
+            data-action="verDetalhes"
+            data-product="Look Natal"
+          >
+            Ver Detalhes
+          </button>
+          <button onclick="adicionarAoLook('Look-de-Natal')">
+            Adicionar ao look
+          </button>
+        </div>
       </div>
-      <button class="action-button" data-action="verDetalhes" data-product="Kit Look 3">Ver Detalhes</button>
-      <button class="action-button" data-action="adicionarAoCarrinho" data-product="Kit Look 3">Adicionar ao
-        Carrinho</button>
-    </div>
-  </div>
-</section>
+    </section>
 
-  <section id="recomendacoes" class="recomendacoes">
-    <h2>Recomendações de Looks</h2>
-    <div class="look-recommendation">
-      <div class="look-item">
-        <img src="https://i.pinimg.com/736x/8b/3c/a6/8b3ca6336f7800fc22181d1a042771b1.jpg" alt="Look Casual"
-          id="Look-Casual-img">
-        <h3>Look Casual</h3>
-        <p>Perfeito para o dia a dia, com peças que combinam entre si.</p>
-        <button class="action-button" data-action="adicionarAoLook" data-product="Look Casual" data-img="https://i.pinimg.com/736x/8b/3c/a6/8b3ca6336f7800fc22181d1a042771b1.jpg">Adicionar ao look</button>
-      </div>
-  
-      <div class="look-item">
-        <img src="https://i.pinimg.com/474x/6c/3b/01/6c3b01f45cef40cc2e23f5c7ac587c1b.jpg" alt="Look Elegante"
-          id="Look-Elegante-img">
-        <h3>Look Elegante</h3>
-        <p>Para eventos formais ou ocasiões especiais, sempre elegante e confortável.</p>
-        <button class="action-button" data-action="adicionarAoLook" data-product="Look Elegante" data-img="https://i.pinimg.com/474x/6c/3b/01/6c3b01f45cef40cc2e23f5c7ac587c1b.jpg">Adicionar ao
-          look</button>
-      </div>
-  
-      <div class="look-item">
-        <img src="https://i.pinimg.com/474x/aa/0e/4a/aa0e4acf6980dab3b7091919e00a329e.jpg" alt="Look de Natal"
-          id="Look-de-Natal-img">
-        <h3>Look de Natal</h3>
-        <p>Para eventos formais ou ocasiões especiais, sempre elegante e confortável.</p>
-        <button class="action-button" data-action="adicionarAoLook" data-product="Look de Natal" data-img="https://i.pinimg.com/474x/aa/0e/4a/aa0e4acf6980dab3b7091919e00a329e.jpg">Adicionar ao
-          look</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="dicas-de-moda" class="dicas-de-moda">
-    <h2>Dicas de Estilo</h2>
-    <p>Descubra as melhores maneiras de criar looks incríveis usando peças modulares, versáteis e sustentáveis.</p>
-  
-    <div class="dica-item">
-      <h3>Como misturar estilos com peças modulares?</h3>
-      <p>Aprenda a combinar diferentes tipos de roupas para criar visuais elegantes e funcionais para qualquer ocasião.
+    <section id="dicas-de-moda" class="dicas-de-moda">
+      <h2>Dicas de Estilo</h2>
+      <p>
+        Descubra as melhores maneiras de criar looks incríveis usando peças
+        modulares, versáteis e sustentáveis.
       </p>
-      <button onclick="document.location='#como-funciona'">Leia mais</button>
-    </div>
-  
-    <div class="dica-item">
-      <h3>Dicas de estilo sustentável</h3>
-      <p>Entenda como nossas peças ajudam você a renovar o guarda-roupa sem prejudicar o meio ambiente.</p>
-      <button class="action-button" data-action="leiaMais">Leia mais</button>
-    </div>
-  </section>
 
-  <section id="depoimentos" class="depoimentos">
-    <h2>O que nossos clientes estão dizendo</h2>
-    <div class="depoimento">
-      <p>"A experiência de montar looks é incrível! Nunca imaginei que peças modulares pudessem ser tão práticas e
-        estilosas!" - João S.</p>
-    </div>
+      <div class="dica-item">
+        <h3>Como misturar estilos com peças modulares?</h3>
+        <p>
+          Para misturar estilos com peças modulares, combine diferentes
+          peças-chave, como blusas, calças e acessórios, de maneira criativa.
+          Escolha peças que possam ser usadas de várias formas e que se
+          complementem, permitindo criar visuais distintos para qualquer
+          ocasião.
+        </p>
+      </div>
 
-    <div class="depoimento">
-      <p>"As roupas são super confortáveis e a possibilidade de personalização é um grande diferencial!" - Maria L.</p>
-    </div>
-  </section>
+      <div class="dica-item">
+        <h3>Dicas de estilo sustentável</h3>
+        <p>
+          Adotar um estilo sustentável significa optar por peças que duram mais
+          tempo e têm um menor impacto ambiental. Invista em roupas versáteis e
+          atemporais, escolha marcas que priorizam a produção responsável e
+          considere a reutilização e o reaproveitamento de peças para renovar
+          seu guarda-roupa de forma consciente.
+        </p>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
-    <p>Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a></p>
-    <div class="social-media">
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://twitter.com" target="_blank">Twitter</a>
-    </div>
-  </footer>
+    <section id="depoimentos" class="depoimentos">
+      <h2>O que nossos clientes estão dizendo</h2>
+      <div class="depoimento">
+        <p>
+          "A experiência de montar looks é incrível! Nunca imaginei que peças
+          modulares pudessem ser tão práticas e estilosas!" - João S.
+        </p>
+      </div>
 
-  <script src="../js/interactivity.js"></script>
-</body>
+      <div class="depoimento">
+        <p>
+          "As roupas são super confortáveis e a possibilidade de personalização
+          é um grande diferencial!" - Maria L.
+        </p>
+      </div>
+    </section>
 
+    <footer class="footer">
+      <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
+      <p>
+        Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a>
+      </p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+      </div>
+    </footer>
+
+    <script src="../js/interactivity.js"></script>
+  </body>
 </html>

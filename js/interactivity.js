@@ -1,35 +1,37 @@
-document.addEventListener('click', (event) => {
-  const button = event.target;
-  if (button.classList.contains('action-button')) {
-    const action = button.dataset.action;
-    const product = button.dataset.product;
+document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('click', (event) => {
+    const button = event.target;
+    if (button.classList.contains('action-button')) {
+      const action = button.dataset.action;
+      const product = button.dataset.product;
 
-    switch (action) {
-      case 'verLooks':
-        window.location.href = '#produtos';
-        break;
+      switch (action) {
+        case 'verLooks':
+          window.location.href = '#produtos';
+          break;
 
-      case 'logout':
-        alert('Logout realizado com sucesso!');
-        window.location.href = "login.html";
-        break;
+        case 'logout':
+          alert('Logout realizado com sucesso!');
+          window.location.href = "login.html";
+          break;
 
-      case 'adicionarAoLook':
-        adicionarAoLook(product);
-        break;
+        case 'adicionarAoLook':
+          adicionarAoLook(product, button);
+          break;
 
-      case 'verDetalhes':
-        verDetalhes(product);
-        break;
+        case 'verDetalhes':
+          verDetalhes(product);
+          break;
 
-      case 'leiaMais':
-        abrirModalLeiaMais();
-        break;
+        case 'leiaMais':
+          abrirModalLeiaMais();
+          break;
 
-      default:
-        console.warn('Ação não reconhecida:', action);
+        default:
+          console.warn('Ação não reconhecida:', action);
+      }
     }
-  }
+  });
 });
 
 function adicionarAoLook(produto) {
@@ -54,30 +56,28 @@ function adicionarAoLook(produto) {
   alert(`${produto} foi adicionado ao seu look com sucesso!`);
 }
 
-document.addEventListener("click", (event) => {
+document.addEventListener('click', (event) => {
   const button = event.target;
-
   if (button.classList.contains('action-button')) {
     const action = button.dataset.action;
     const product = button.dataset.product;
 
-    console.log('Ação:', action);
-    console.log('Produto:', product);
-
     switch (action) {
       case 'verDetalhes':
-        abrirModalDetalhes(product);
+        abrirModalDetalhes(product, button);
         break;
+
       case 'adicionarAoCarrinho':
         adicionarAoCarrinho(product);
         break;
+
       default:
         console.warn('Ação não reconhecida:', action);
     }
   }
 });
 
-function abrirModalDetalhes(produto) {
+function abrirModalDetalhes(produto, button) {
   if (!produto) {
     alert('Produto não encontrado.');
     return;
@@ -85,47 +85,103 @@ function abrirModalDetalhes(produto) {
 
   fecharModal();
 
-  const imgElement = document.querySelector(`#${produto}-img`);
-  const descElement = document.querySelector(`#${produto}-desc`);
-  const priceElement = document.querySelector(`#${produto} .price`);
-  const availabilityElement = document.querySelector(`#${produto} .availability`);
-  const ratingElement = document.querySelector(`#${produto} .rating span`);
+  const productItem = button.closest('.product-item');
+  if (!productItem) {
+    alert('Produto não encontrado no DOM.');
+    return;
+  }
+
+  const imgElement = productItem.querySelector('img');
+  const descElement = productItem.querySelector('p:nth-child(3)');
+  const priceElement = productItem.querySelector('.price');
+  const availabilityElement = productItem.querySelector('.availability');
+  const ratingElement = productItem.querySelector('.rating span');
 
   const modal = document.createElement('div');
   modal.classList.add('modal');
   modal.innerHTML = `
     <div class="modal-content">
-      <span class="close" onclick="fecharModal()">&times;</span>
-      <h2>${produto}</h2> <!-- Nome do produto -->
-      <img src="${imgElement ? imgElement.src : ''}" alt="${produto}" class="modal-image">
-      <p>${descElement ? descElement.textContent : 'Descrição não disponível.'}</p>
-      <p class="price">${priceElement ? priceElement.textContent : 'Preço não disponível.'}</p> <!-- Preço -->
-      <p class="availability">${availabilityElement ? availabilityElement.textContent : 'Sem informação de estoque.'}</p> <!-- Disponibilidade -->
-      <div class="rating">
-        <span>${ratingElement ? ratingElement.textContent : '★★★★★'}</span> <!-- Avaliação -->
-      </div>
-      <button class="add-to-cart">Adicionar ao Carrinho</button>
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <img src="${imgElement ? imgElement.src : ''}" alt="${produto.name}" class="modal-image">
+    <p>${descElement ? descElement.textContent : 'Descrição não disponível.'}</p>
+    <p class="price" style="color: #000000;">${priceElement ? priceElement.textContent : 'Preço não disponível.'}</p>
+    <p class="availability" style="color: #28a745;">${availabilityElement ? availabilityElement.textContent : 'Sem informação de estoque.'}</p>
+    <div class="rating">
+      <span style="color: #ffd700;">${ratingElement ? ratingElement.textContent : '★★★★★'}</span>
     </div>
+  </div>
   `;
+
+  const style = document.createElement('style');
+  style.innerHTML = `
+  .modal-content {
+    max-height: 80vh; /* Definindo a altura máxima para o conteúdo */
+    overflow-y: auto; /* Habilitando a rolagem vertical */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+`;
+  document.head.appendChild(style);
 
   document.body.appendChild(modal);
 }
 
-function abrirModalLeiaMais() {
-  fecharModal();
+function salvarProdutosNoLocalStorage() {
+  const produtos = [];
 
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-  modal.innerHTML = `
-    <div class="modal-content">
-      <span class="close" onclick="fecharModal()">&times;</span>
-      <h2>Sobre a Elegance</h2>
-      <p>A Elegance é uma marca inovadora que oferece roupas modulares, sustentáveis e elegantes para todas as ocasiões. Nossa missão é unir moda e sustentabilidade, proporcionando peças versáteis que se adaptam ao seu estilo de vida. Escolha Elegance e transforme sua maneira de se vestir.</p>
-    </div>
-  `;
+  const productItems = document.querySelectorAll('.product-item');
 
-  document.body.appendChild(modal);
+  productItems.forEach(item => {
+    const nome = item.querySelector('h3').textContent;
+    const preco = item.querySelector('.price').textContent;
+    const disponibilidade = item.querySelector('.availability').textContent;
+    const avaliacao = item.querySelector('.rating span').textContent;
+    const imagem = item.querySelector('img').src;
+
+    const produto = {
+      name: nome,
+      price: preco,
+      availability: disponibilidade,
+      rating: avaliacao,
+      img: imagem
+    };
+
+    produtos.push(produto);
+  });
+
+  localStorage.setItem('allProducts', JSON.stringify(produtos));
 }
+
+window.onload = salvarProdutosNoLocalStorage;
+
+function adicionarAoCarrinhoProduto(event) {
+  const produtoNome = event.target.getAttribute('data-product');
+  const allProducts = JSON.parse(localStorage.getItem('allProducts')) || [];
+
+  console.log('Produtos no localStorage:', allProducts);
+
+  const produtoSelecionado = allProducts.find(item => item.name === produtoNome);
+
+  if (!produtoSelecionado) {
+    alert('Produto não encontrado.');
+    return;
+  }
+
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  cartItems.push(produtoSelecionado);
+
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+  alert(`${produtoSelecionado.name} foi adicionado ao carrinho com sucesso!`);
+
+  renderCart();
+}
+
+document.querySelectorAll('.action-button[data-action="adicionarAoCarrinhoProduto"]').forEach(button => {
+  button.addEventListener('click', adicionarAoCarrinhoProduto);
+});
 
 function fecharModal() {
   const modal = document.querySelector('.modal');

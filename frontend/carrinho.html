@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrinho - Elegance</title>
-  <link rel="stylesheet" href="../css/carrinho.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho - Elegance</title>
+    <link rel="stylesheet" href="../css/carrinho.css" />
+  </head>
 
-<body>
-
-  <header>
-    <div class="header-top">
-      <div class="logo">
-        <h1>Elegance</h1>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <h1>Elegance</h1>
+        </div>
+        <a href="./index.html"><button>Voltar</button></a>
       </div>
-      <a href="./index.html"><button>Voltar</button></a>
+    </header>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Look Elegance</h1>
+      </div>
     </div>
-  </header>
-  <div class="hero">
-    <div class="hero-text">
-      <h1>Look Elegance</h1>
-    </div>
-  </div>
 
-  <section id="carrinho" class="produtos">
-    <h2>Produtos no Carrinho</h2>
-    <div class="product-list" id="cart-list">
-    </div>
-    <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
-  </section>
+    <section id="carrinho" class="produtos">
+      <h2>Produtos no Carrinho</h2>
+      <div class="product-list" id="cart-list"></div>
+      <button id="finalizar-compra" onclick="finalizarCompra()">
+        Finalizar Compra
+      </button>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
-    <p>Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a></p>
-  </footer>
+    <footer class="footer">
+      <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
+      <p>
+        Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a>
+      </p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+      </div>
+    </footer>
 
-  <script src="../js/carrinho.js"></script>
-</body>
-
+    <script src="../js/carrinho.js"></script>
+  </body>
 </html>

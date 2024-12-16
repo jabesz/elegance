@@ -1,78 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos - Elegance</title>
+    <link rel="stylesheet" href="../css/produtos.css" />
+    <script src="../js/produtos.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produtos - Elegance</title>
-  <link rel="stylesheet" href="../css/produtos.css">
-  <script src="../js/produtos.js"></script>
-</head>
-
-<body>
-  <header>
-    <div class="header-top">
-      <div class="logo">
-        <h1>Elegance</h1>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <h1>Elegance</h1>
+        </div>
+        <a href="./index.html"><button>Voltar</button></a>
       </div>
-      <a href="./index.html"><button>Voltar</button></a>
+    </header>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Produtos Elegance</h1>
+      </div>
     </div>
-  </header>
-  <div class="hero">
-    <div class="hero-text">
-      <h1>Produtos Elegance</h1>
-    </div>
-  </div>
 
-  <section class="produtos">
     <h2>Explore os nossos produtos</h2>
-    <div class="produto-grid">
-      <div class="produto-item">
-        <img src="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg" alt="Camiseta Polo">
-        <div class="produto-info">
-          <h3>Camiseta Polo</h3>
-          <p>Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve. Ideal para o
-            verão e dias frescos.</p>
-          <p class="price">R$ 99,99</p>
-          <p class="availability">Em estoque</p>
-          <div class="rating">
-            <span>★★★★☆</span>
-            <p>25 avaliações</p>
+    <section class="produtos">
+      <h3>Camisas</h3>
+      <div class="produto-grid">
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/51/5b/47/515b47cec588e1753797c79e9bfb5c41.jpg"
+            alt="Camiseta Polo"
+          />
+          <div class="produto-info">
+            <h3>Camiseta Lacoste Branca</h3>
+            <p>
+              Peça versátil para todas as ocasiões, pode ser usada como uma
+              blusa casual ou uma jaqueta leve. Ideal para o verão e dias
+              frescos.
+            </p>
+            <p class="price">R$ 99,99</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★★☆</span>
+              <p>25 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/51/5b/47/515b47cec588e1753797c79e9bfb5c41.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
           </div>
-          <button class="open-modal" data-name="Camiseta Polo" 
-          data-img="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg"
-          data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
-          data-price="R$ 99,99" 
-          data-availability="Em estoque"
-          data-rating="★★★★☆">Ver Detalhes</button>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/85/f5/c2/85f5c2ff632476566199442f5da7d262.jpg"
+            alt="Produto 2"
+          />
+          <div class="produto-info">
+            <h3>Camiseta Lacoste Preta</h3>
+            <p>
+              Descrição detalhada do produto, destacando suas principais
+              características e benefícios.
+            </p>
+            <p class="price">R$ 249,90</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★☆☆</span>
+              <p>12 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/85/f5/c2/85f5c2ff632476566199442f5da7d262.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/b9/22/62/b922621c479480d23f7887a646f4a340.jpg"
+            alt="Camiseta Polo"
+          />
+          <div class="produto-info">
+            <h3>Camiseta Lacoste Vermelha</h3>
+            <p>
+              Peça versátil para todas as ocasiões, pode ser usada como uma
+              blusa casual ou uma jaqueta leve. Ideal para o verão e dias
+              frescos.
+            </p>
+            <p class="price">R$ 99,99</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★★☆</span>
+              <p>25 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/b9/22/62/b922621c479480d23f7887a646f4a340.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/21/22/06/212206257445a87d8a3e24188ef0e24e.jpg"
+            alt="Produto 2"
+          />
+          <div class="produto-info">
+            <h3>Camiseta Nike Preta</h3>
+            <p>
+              Descrição detalhada do produto, destacando suas principais
+              características e benefícios.
+            </p>
+            <p class="price">R$ 249,90</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★☆☆</span>
+              <p>12 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/21/22/06/212206257445a87d8a3e24188ef0e24e.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/b6/c9/2b/b6c92b37ed4da421841d0e5d0a250f31.jpg"
+            alt="Camiseta Polo"
+          />
+          <div class="produto-info">
+            <h3>Camiseta Nike Branca</h3>
+            <p>
+              Peça versátil para todas as ocasiões, pode ser usada como uma
+              blusa casual ou uma jaqueta leve. Ideal para o verão e dias
+              frescos.
+            </p>
+            <p class="price">R$ 99,99</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★★☆</span>
+              <p>25 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/b6/c9/2b/b6c92b37ed4da421841d0e5d0a250f31.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/9d/ea/ba/9deaba7a2ff304ebd6f088b6224d75fb.jpg"
+            alt="Produto 2"
+          />
+          <div class="produto-info">
+            <h3>Camiseta Jordan Preta</h3>
+            <p>
+              Descrição detalhada do produto, destacando suas principais
+              características e benefícios.
+            </p>
+            <p class="price">R$ 249,90</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★☆☆</span>
+              <p>12 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/9d/ea/ba/9deaba7a2ff304ebd6f088b6224d75fb.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
         </div>
       </div>
-      <div class="produto-item">
-        <img src="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg" alt="Produto 2">
-        <div class="produto-info">
-          <h3>Produto 2</h3>
-          <p>Descrição detalhada do produto, destacando suas principais características e benefícios.</p>
-          <p class="price">R$ 249,90</p>
-          <p class="availability">Em estoque</p>
-          <div class="rating">
-            <span>★★★☆☆</span>
-            <p>12 avaliações</p>
+    </section>
+    <section class="produtos">
+      <h3>Calças/Shorts</h3>
+      <div class="produto-grid">
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/af/2f/1b/af2f1ba97cdbef13fd8a7299c7998449.jpg"
+            alt="Camiseta Polo"
+          />
+          <div class="produto-info">
+            <h3>Calça Jeans Preta</h3>
+            <p>
+              Peça versátil para todas as ocasiões, pode ser usada como uma
+              blusa casual ou uma jaqueta leve. Ideal para o verão e dias
+              frescos.
+            </p>
+            <p class="price">R$ 99,99</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★★☆</span>
+              <p>25 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/af/2f/1b/af2f1ba97cdbef13fd8a7299c7998449.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
           </div>
-          <button class="open-modal" data-name="Camiseta Polo" 
-          data-img="https://i.pinimg.com/236x/6f/ff/c3/6fffc3d466a112c4ebb875b65244e097.jpg"
-          data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
-          data-price="R$ 99,99" 
-          data-availability="Em estoque"
-          data-rating="★★★★☆">Ver Detalhes</button>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/53/f1/3c/53f13cacba04b896ff8930121f6aad8e.jpg"
+            alt="Produto 2"
+          />
+          <div class="produto-info">
+            <h3>Calça Slim Preta</h3>
+            <p>
+              Descrição detalhada do produto, destacando suas principais
+              características e benefícios.
+            </p>
+            <p class="price">R$ 249,90</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★☆☆</span>
+              <p>12 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/53/f1/3c/53f13cacba04b896ff8930121f6aad8e.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/df/6a/f0/df6af0fa9ae57fcabc6dd6462f799cbf.jpg"
+            alt="Camiseta Polo"
+          />
+          <div class="produto-info">
+            <h3>Calça Jeans</h3>
+            <p>
+              Peça versátil para todas as ocasiões, pode ser usada como uma
+              blusa casual ou uma jaqueta leve. Ideal para o verão e dias
+              frescos.
+            </p>
+            <p class="price">R$ 99,99</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★★☆</span>
+              <p>25 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/df/6a/f0/df6af0fa9ae57fcabc6dd6462f799cbf.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/a6/d0/25/a6d025e403cf88ec393354d4dda69a91.jpg"
+            alt="Produto 2"
+          />
+          <div class="produto-info">
+            <h3>Short Nike Preto</h3>
+            <p>
+              Descrição detalhada do produto, destacando suas principais
+              características e benefícios.
+            </p>
+            <p class="price">R$ 249,90</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★☆☆</span>
+              <p>12 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/a6/d0/25/a6d025e403cf88ec393354d4dda69a91.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/4f/99/3f/4f993fbdfa82cf0caabc940a1a209668.jpg"
+            alt="Camiseta Polo"
+          />
+          <div class="produto-info">
+            <h3>Short Nike de Corrida</h3>
+            <p>
+              Peça versátil para todas as ocasiões, pode ser usada como uma
+              blusa casual ou uma jaqueta leve. Ideal para o verão e dias
+              frescos.
+            </p>
+            <p class="price">R$ 99,99</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★★☆</span>
+              <p>25 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/4f/99/3f/4f993fbdfa82cf0caabc940a1a209668.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+        <div class="produto-item">
+          <img
+            src="https://i.pinimg.com/474x/54/38/11/543811a4c23884953f01b2d63e61eea3.jpg"
+            alt="Produto 2"
+          />
+          <div class="produto-info">
+            <h3>Short Nike Branco</h3>
+            <p>
+              Descrição detalhada do produto, destacando suas principais
+              características e benefícios.
+            </p>
+            <p class="price">R$ 249,90</p>
+            <p class="availability">Em estoque</p>
+            <div class="rating">
+              <span>★★★☆☆</span>
+              <p>12 avaliações</p>
+            </div>
+            <button
+              class="open-modal"
+              data-name="Camiseta Polo"
+              data-img="https://i.pinimg.com/474x/54/38/11/543811a4c23884953f01b2d63e61eea3.jpg"
+              data-description="Peça versátil para todas as ocasiões, pode ser usada como uma blusa casual ou uma jaqueta leve."
+              data-price="R$ 99,99"
+              data-availability="Em estoque"
+              data-rating="★★★★☆"
+            >
+              Ver Detalhes
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <footer>
-    <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
-  </footer>
-</body>
-
+    <footer class="footer">
+      <p>&copy; 2024 Elegance. Todos os direitos reservados.</p>
+      <p>
+        Contato: <a href="mailto:contato@elegance.com">contato@elegance.com</a>
+      </p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+      </div>
+    </footer>
+  </body>
 </html>

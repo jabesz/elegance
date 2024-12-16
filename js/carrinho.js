@@ -10,7 +10,7 @@ function renderCart() {
       <img src="${item.img}" alt="${item.name}">
       <h3>${item.name}</h3>
       <p>${item.description}</p>
-      <p><strong>R$ ${item.price}</strong></p>
+      <p style="color: #28a745;"><strong>R$ ${item.price}</strong></p>
       <button onclick="excluirDoCarrinho(${index})">Excluir do Carrinho</button>
     `;
     cartList.appendChild(productItem);
